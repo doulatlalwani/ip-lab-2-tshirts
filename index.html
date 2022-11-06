@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, 
+initial-scale=1.0" />
+    <title>HTML FORM</title>
+    <script src="https://kit.fontawesome.com/f635a28c1e.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="style2.css" /> -->
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&disp lay=swap");
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #F7EDDB;
+        font-family: "Poppins", sans-serif;
+        margin: 0.7rem;
+    }
+
+    /* type {
+        background-color: ;
+    }
+    */
+    .cart {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+
+    form h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    input,
+    select {
+        margin-bottom: 1rem;
+    }
+
+    .mt-1 {
+        margin-top: 1rem;
+    }
+
+    .options {
+        margin-top: 1rem;
+    }
+
+    .options label {
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+        color: white;
+        background: #333;
+        border: none;
+        border-radius: 7px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 750ms ease-in-out;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        background-color: #2dbdff;
+    }
+
+    .preview {
+        display: flex;
+        width: 400px;
+        margin-right: 200px;
+        background: #f4f4f4;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .preview img {
+        height: 80%;
+        width: 80%;
+    }
+
+    @media (max-width: 1100px) {
+        .cart {
+            margin-left: 3rem;
+        }
+
+        .preview {
+            margin-right: 3rem;
+        }
+    }
+
+    @media (max-width: 880px) {
+        body {
+            margin: 0;
+        }
+
+        form h3 {
+            text-align: center;
+        }
+
+        .cart {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0;
+        }
+
+        .form-data {
+            margin-top: 2rem;
+        }
+
+        .preview {
+            height: 400px;
+            width: 350px;
+            margin-right: 3rem;
+        }
+    }
+</style>
+
+<body>
+    <form action="" enctype="multipart/form-data" method="put">
+        <h2 class="type">Customer Details</h2>
+        <label for="lname">First Name: </label>
+        <input type="text" id="lname" name="lname" placeholder="Your First Name.."><br><br>
+
+        <label for="lname">Last Name: </label>
+        <input type="text" id="lname" name="lname" placeholder="Your Last Name.."><br><br>
+
+        <label for="mobile">Contact No: </label>
+        <input type="text" id="mobile" name="email" placeholder="Your Contact No."><br><br>
+
+        <label for="email">Email ID: </label>
+        <input type="text" id="email" placeholder="abc@gmail.com" name="email"><br><br>
+
+        <label for="addr">Shipping Address</label>
+        <textarea id="addr" name="addr" placeholder="Your Shipping Address.."></textarea><br><br>
+
+        <label for="City">City: </label>
+        <input type="text" id="City" name="City"><br><br>
+
+        <label for="code">Pin Code: </label>
+        <input type="text" id="code" name="code"><br><br>
+
+        <label for="State">State: </label>
+        <input type="text" id="State" name="State"><br><br>
+        <div>
+            <h3>Your Cart</h3>
+            <div class="cart">
+                <div class="form-data">
+                    <label for="tagline">Enter Tagline:</label>
+                    <input type="text" name="tagline" id="tagline" /> <br />
+
+                    <label for="color">Choose Color:</label>
+                    <input type="radio" id="red" name="color" value="Red" />
+
+                    <label for="red">Red</label>
+                    <input type="radio" id="white" name="color" value="White" />
+
+                    <label for="white">White</label>
+                    <input type="radio" id="blue" name="color" value="blue" />
+
+                    <label for="blue">Blue</label> <br />
+
+                    <label for="size">Select Size:</label>
+                    <select id="size" name="size">
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                    </select>
+                    <br />
+                    <label for="quantity">Quantity: </label>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br />
+                    <label for="price">Total Order Price: <strong>Rs.300/-</strong></label>
+                    <br />
+                    <div class="mt-1"></div>
+                    <label for="payment_options">Payment Options:</label>
+                    <br />
+                    <div class="options">
+                        <input type="radio" id="cc" name="color" value="Credit/Debit Card" />
+                        <label for="cc">Credit/Debit Card</label> <br />
+
+                        <input type="radio" id="upi" name="color" value="UPI" />
+                        <label for="upi">UPI</label> <br />
+
+                        <input type="radio" id="crypto" name="color" value="Crypto" />
+                        <label for="crypto">Crypto-Wallet</label>
+                    </div>
+
+                    <button type="submit" class="btn">Place Order</button>
+                </div>
+                <div class="preview">
+                    <img src="https://outoforder.in/wp-content/uploads/2020/03/Plain-White-Tshirt-for-Men.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
